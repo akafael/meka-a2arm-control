@@ -65,6 +65,7 @@ env:
     - CI_SOURCE_PATH=$(pwd)
     - ROSINSTALL_FILE=$CI_SOURCE_PATH/dependencies.rosinstall
     - CATKIN_OPTIONS=$CI_SOURCE_PATH/catkin.options
+    - DQROBOTICS=$CI_SOURCE_PATH/dq_robotics
     - ROS_PARALLEL_JOBS='-j8 -l6'
     # Set the python path manually to include /usr/-/python2.7/dist-packages
     # as this is where apt-get installs python packages.
@@ -102,7 +103,7 @@ install:
 # wstool looks for a ROSINSTALL_FILE defined in the environment variables.
 before_script:
   # Build dqrobotics from source
-  - cd ~/catkin_ws/src/dq_robotics
+  - cd $CI_SOURCE_PATH
   - mkdir build
   - cd build
   - cmake ..
