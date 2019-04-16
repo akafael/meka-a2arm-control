@@ -50,7 +50,7 @@ To install all packages from the this repository as Debian packages use
 #### Dependencies
 
 - [Robot Operating System (ROS)](http://wiki.ros.org) (middleware for robotics),
-- [Eigen] (linear algebra library)
+- [Eigen](linear algebra library)
 
 		sudo apt-get install libeigen3-dev
 
@@ -60,7 +60,7 @@ To install all packages from the this repository as Debian packages use
 To build from source, clone the latest version from this repository into your catkin workspace and compile the package using
 
 	cd catkin_workspace/src
-	git clone https://github.com/ethz-asl/ros_package_template.git
+	git clone https://github.com/akafael/meka-a2arm-control/ros_package_template.git
 	cd ../
 	catkin_make
 
@@ -150,7 +150,7 @@ Reads temperature measurements and computed the average.
 
 ## Bugs & Feature Requests
 
-Please report bugs and request features using the [Issue Tracker](https://github.com/ethz-asl/ros_best_practices/issues).
+Please report bugs and request features using the [Issue Tracker](https://github.com/akafael/meka-a2arm-control/ros_best_practices/issues).
 
 
 [ROS]: http://www.ros.org
