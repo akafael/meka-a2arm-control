@@ -36,7 +36,7 @@ catkin_package(
 #  LIBRARIES
 #    ${PROJECT_NAME}_core
   CATKIN_DEPENDS
-    dqrobotics
+    dq_robotics
     m3ctrl_msgs
     roscpp
     sensor_msgs

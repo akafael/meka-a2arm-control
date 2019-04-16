@@ -13,7 +13,7 @@
   
   <!--<depend>eigen</depend>-->
   <!--<depend>boost</depend>-->
-  <depend>dqrobotics</depend>
+  <depend>dq_robotics</depend>
   <depend>m3ctrl_msgs</depend>
   <depend>roscpp</depend>
   <depend>sensor_msgs</depend>
