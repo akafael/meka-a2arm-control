@@ -1,30 +1,29 @@
 #pragma once
 
-#include "ros_package_template/Algorithm.hpp"
-
 // ROS
 #include <ros/ros.h>
 #include <sensor_msgs/Temperature.h>
 #include <std_srvs/Trigger.h>
 
-namespace ros_package_template {
+namespace meka_a2arm_control {
 
 /*!
  * Main class for the node to handle the ROS interfacing.
  */
-class RosPackageTemplate
+class MekaA2ArmControl
+
 {
  public:
   /*!
    * Constructor.
    * @param nodeHandle the ROS node handle.
    */
-  RosPackageTemplate(ros::NodeHandle& nodeHandle);
+  MekaA2ArmControl(ros::NodeHandle& nodeHandle);
 
   /*!
    * Destructor.
    */
-  virtual ~RosPackageTemplate();
+  virtual ~MekaA2ArmControl();
 
  private:
   /*!
@@ -59,9 +58,6 @@ class RosPackageTemplate
 
   //! ROS service server.
   ros::ServiceServer serviceServer_;
-
-  //! Algorithm computation object.
-  Algorithm algorithm_;
 };
 
 } /* namespace */

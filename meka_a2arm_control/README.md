@@ -1,4 +1,4 @@
-# Package Name
+# Meka A2 Arm Control
 
 ## Overview
 
@@ -8,13 +8,13 @@ This is a template: replace, remove, and add where required. Describe here what 
 
 ### License
 
-The source code is released under a [BSD 3-Clause license](ros_package_template/LICENSE).
+The source code is released under a [BSD 3-Clause license](LICENSE).
 
-**Author: Péter Fankhauser<br />
-Affiliation: [ANYbotics](https://www.anybotics.com/)<br />
-Maintainer: Péter Fankhauser, pfankhauser@anybotics.com**
+**Author: Rafael Lima<br />
+Affiliation: [LARA-UnB](https://www.anybotics.com/)<br />
+Maintainer: Rafael Lima**
 
-The PACKAGE NAME package has been tested under [ROS] Indigo and Ubuntu 14.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
+The **Meka A2 Arm Control** package has been tested under [ROS] Indigo and Ubuntu 14.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed. 
 
 [![Build Status](http://rsl-ci.ethz.ch/buildStatus/icon?job=ros_best_practices)](http://rsl-ci.ethz.ch/job/ros_best_practices/)
 

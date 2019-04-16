@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_package_template)
+project(meka_a2arm_control)
 
 ## Use C++11
 add_definitions(-std=c++11)
@@ -10,6 +10,8 @@ add_definitions(-std=c++11)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED
   COMPONENTS
+    dq_robotics
+    m3ctrl_msgs
     roscpp
     sensor_msgs
 )
@@ -31,9 +33,11 @@ catkin_package(
   INCLUDE_DIRS
     include
 #    ${EIGEN3_INCLUDE_DIR}
-  LIBRARIES
-    ${PROJECT_NAME}_core
+#  LIBRARIES
+#    ${PROJECT_NAME}_core
   CATKIN_DEPENDS
+    dqrobotics
+    m3ctrl_msgs
     roscpp
     sensor_msgs
 #  DEPENDS
@@ -54,32 +58,32 @@ include_directories(
 )
 
 ## Declare a cpp library
-add_library(${PROJECT_NAME}_core
-   src/Algorithm.cpp
-)
+#add_library(${PROJECT_NAME}_core
+   #src/Algorithm.cpp
+#)
 
 ## Declare cpp executables
 add_executable(${PROJECT_NAME}
   src/${PROJECT_NAME}_node.cpp
-  src/RosPackageTemplate.cpp
+  src/MekaA2ArmControl.cpp
 )
 
 ## Add dependencies to exported targets, like ROS msgs or srvs
-add_dependencies(${PROJECT_NAME}_core
-  ${catkin_EXPORTED_TARGETS}
-)
+#add_dependencies(${PROJECT_NAME}_core
+#  ${catkin_EXPORTED_TARGETS}
+#)
 
 add_dependencies(${PROJECT_NAME}
   ${catkin_EXPORTED_TARGETS}
 )
 
 ## Specify libraries to link executable targets against
-target_link_libraries(${PROJECT_NAME}_core
-  ${catkin_LIBRARIES}
-)
+#target_link_libraries(${PROJECT_NAME}_core
+#  ${catkin_LIBRARIES}
+#)
 
 target_link_libraries(${PROJECT_NAME}
-  ${PROJECT_NAME}_core
+#  ${PROJECT_NAME}_core
   ${catkin_LIBRARIES}
 )
 
@@ -112,14 +116,14 @@ install(
 ## Testing ##
 #############
 
-if(CATKIN_ENABLE_TESTING)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+#if(CATKIN_ENABLE_TESTING)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 ## Add gtest based cpp test target and link libraries
-catkin_add_gtest(${PROJECT_NAME}-test
-  test/test_ros_package_template.cpp
-  test/AlgorithmTest.cpp)
-endif()
+#catkin_add_gtest(${PROJECT_NAME}-test
+  #test/test_ros_package_template.cpp
+  #test/AlgorithmTest.cpp)
+#endif()
 
-if(TARGET ${PROJECT_NAME}-test)
-  target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME}_core)
-endif()
+#if(TARGET ${PROJECT_NAME}-test)
+  #target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME}_core)
+#endif()
