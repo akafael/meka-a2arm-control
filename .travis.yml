@@ -104,6 +104,7 @@ install:
 before_script:
   # Build dqrobotics from source
   - cd $DQROBOTICS_SRC
+  - sed CMakeLists.txt -i -e "s/\(CMAKE_MINIMUM_REQUIRED\)\((.*)\)/\1(VERSION 2.8)/g"
   - mkdir build
   - cd build
   - cmake ..
