@@ -10,10 +10,10 @@ add_definitions(-std=c++11)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED
   COMPONENTS
-    dq_robotics
-    m3ctrl_msgs
     roscpp
     sensor_msgs
+    m3ctrl_msgs
+#    dq_robotics
 )
 
 ## Find system libraries
@@ -32,15 +32,15 @@ find_package(catkin REQUIRED
 catkin_package(
   INCLUDE_DIRS
     include
-#    ${EIGEN3_INCLUDE_DIR}
+    ${EIGEN3_INCLUDE_DIR}
 #  LIBRARIES
 #    ${PROJECT_NAME}_core
   CATKIN_DEPENDS
-    dq_robotics
-    m3ctrl_msgs
     roscpp
     sensor_msgs
+    m3ctrl_msgs
 #  DEPENDS
+#    dq_robotics
 #    Boost
 )
 
