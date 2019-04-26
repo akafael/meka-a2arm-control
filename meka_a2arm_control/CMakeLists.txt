@@ -26,7 +26,7 @@ ExternalProject_Add(dqrobotics
   GIT_TAG           master
   SOURCE_DIR        "${CMAKE_SOURCE_DIR}/dq_robotics"
   BINARY_DIR        "${CMAKE_BINARY_DIR}/dq_robotics"
-  INSTALL_DIR       "${CMAKE_BINARY_DIR}/dq_robotics"
+  INSTALL_COMMAND   ""
 )
 
 ###################################
