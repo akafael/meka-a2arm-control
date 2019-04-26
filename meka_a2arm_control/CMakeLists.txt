@@ -17,8 +17,16 @@ find_package(catkin REQUIRED
 )
 
 ## Find system libraries
-#find_package(Eigen3 REQUIRED)
+find_package(Eigen3 REQUIRED)
 #find_package(Boost REQUIRED)
+
+include(ExternalProject)
+ExternalProject_Add(dqrobotics
+  GIT_REPOSITORY    https://github.com/dqrobotics/cpp.git
+  GIT_TAG           master
+  SOURCE_DIR        "${CMAKE_SOURCE_DIR}/dq_robotics"
+  BINARY_DIR        "${CMAKE_BINARY_DIR}/dq_robotics"
+)
 
 ###################################
 ## catkin specific configuration ##
@@ -53,7 +61,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-#  ${EIGEN3_INCLUDE_DIR}
+  ${EIGEN3_INCLUDE_DIR}
 #  ${Boost_INCLUDE_DIRS}
 )
 
