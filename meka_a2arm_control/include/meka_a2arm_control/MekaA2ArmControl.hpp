@@ -2,7 +2,8 @@
 
 // ROS
 #include <ros/ros.h>
-#include <sensor_msgs/Temperature.h>
+#include <m3ctrl_msgs/M3JointCmd.h>
+#include <sensor_msgs/JointState.h>
 #include <std_srvs/Trigger.h>
 
 namespace meka_a2arm_control {
@@ -36,7 +37,7 @@ class MekaA2ArmControl
    * ROS topic callback method.
    * @param message the received message.
    */
-  void topicCallback(const sensor_msgs::Temperature& message);
+  void topicCallback(const m3ctrl_msgs::M3JointCmd::ConstPtr& msg);
 
   /*!
    * ROS service server callback.

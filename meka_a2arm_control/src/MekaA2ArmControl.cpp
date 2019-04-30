@@ -29,7 +29,7 @@ bool MekaA2ArmControl::readParameters()
   return true;
 }
 
-void MekaA2ArmControl::topicCallback(const sensor_msgs::Temperature& message)
+void MekaA2ArmControl::topicCallback(const m3ctrl_msgs::M3JointCmd::ConstPtr& msg)
 {
   // do nothing
 }
