@@ -94,16 +94,6 @@ install:
   - cd ~/catkin_ws/src
   - ln -s $CI_SOURCE_PATH .
 
-# Install all dependencies, using wstool first and rosdep second.
-# wstool looks for a ROSINSTALL_FILE defined in the environment variables.
-before_script:
-  # Build dqrobotics from source
-  - cd $DQROBOTICS_SRC
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
-
 # Compile and test (mark the build as failed if any step fails). If the
 # CATKIN_OPTIONS file exists, use it as an argument to catkin_make, for example
 # to blacklist certain packages.
