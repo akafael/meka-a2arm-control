@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/akafael/meka-a2arm-control.svg?branch=master)](https://travis-ci.org/akafael/meka-a2arm-control)
+[![Build Status](https://api.travis-ci.com/akafael/meka-arm-data.svg?branch=master&branch=master)](https://travis-ci.com/github/akafael/meka-arm-data)
 
 # meka-a2arm-control
 
